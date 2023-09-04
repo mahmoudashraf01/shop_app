@@ -3,6 +3,7 @@ import 'package:shoping_strore/shared/themes/colors.dart';
 import 'package:shoping_strore/shared/themes/text.dart';
 import 'package:shoping_strore/shared/widgets/categories_widgets.dart';
 import 'package:shoping_strore/shared/widgets/home_app_bar.dart';
+import 'package:shoping_strore/shared/widgets/item_widgets.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -14,7 +15,7 @@ class HomeScreen extends StatelessWidget {
         children: [
           HomeAppBar(),
           Container(
-            height: 500,
+            // height: 500,
             padding: EdgeInsets.only(top: 8),
             decoration: BoxDecoration(
               color: white2,
@@ -72,35 +73,89 @@ class HomeScreen extends StatelessWidget {
                   child: Row(
                     children: [
                       CategotiesWidget(
-                        image: AssetImage('assets/1.jpg'), data: 'Backpack',
+                        image: AssetImage('assets/1.jpg'),
+                        data: 'Backpack',
                       ),
                       CategotiesWidget(
-                        image: AssetImage('assets/2.jpg'), data: 'Bracelet',
+                        image: AssetImage('assets/watch1.jpg'),
+                        data: 'Smart Watch',
                       ),
                       CategotiesWidget(
-                        image: AssetImage('assets/3.jpg'), data: 'Bracelet',
+                        image: AssetImage('assets/3.jpg'),
+                        data: 'Bracelet',
                       ),
                       CategotiesWidget(
-                        image: AssetImage('assets/4.jpg'), data: 'Cool Jacket',
+                        image: AssetImage('assets/4.jpg'),
+                        data: 'Cool Hoodie',
                       ),
                       CategotiesWidget(
-                        image: AssetImage('assets/5.jpg'), data: 'Hooded Shirt',
+                        image: AssetImage('assets/5.jpg'),
+                        data: 'Hooded Shirt',
                       ),
                       CategotiesWidget(
-                        image: AssetImage('assets/sneekers1.jpg'), data: 'Sneaker',
+                        image: AssetImage('assets/sneekers1.jpg'),
+                        data: 'Sneaker',
                       ),
                       CategotiesWidget(
-                        image: AssetImage('assets/5.jpg'), data: 'Hooded Shirt',
+                        image: AssetImage('assets/sweat_bants1.jpg'),
+                        data: 'Sweat Bants',
                       ),
                       CategotiesWidget(
-                        image: AssetImage('assets/5.jpg'), data: 'Hooded Shirt',
+                        image: AssetImage('assets/sweaters2.jpg'),
+                        data: 'Cool Jacket',
                       ),
                     ],
                   ),
                 ),
+                Container(
+                  alignment: Alignment.center,
+                  margin: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+                  child: Text(
+                    'Best Selling',
+                    style: h3Bold.merge(
+                      TextStyle(color: darkBlue),
+                    ),
+                  ),
+                ),
+                //adding items
+                GridView.count(
+                  childAspectRatio: .68,
+                  crossAxisCount: 2,
+                  shrinkWrap: true,
+                  physics: BouncingScrollPhysics(),
+                  children: [
+                    ItemsWidget(
+                      discount: '-50%',
+                      image: 'assets/1.jpg',
+                      description:
+                          'Nice backpack for travelling or packing tools',
+                      price: '55',
+                    ),
+                    ItemsWidget(
+                      discount: '-30%',
+                      image: 'assets/sweaters2.jpg',
+                      description:
+                          'Cool sweater worn on many occasions and many places',
+                      price: '80',
+                    ),
+                    ItemsWidget(
+                      discount: '-60%',
+                      image: 'assets/watch1.jpg',
+                      description: 'Awesome smart watch with many options',
+                      price: '40',
+                    ),
+                    ItemsWidget(
+                      discount: '-20%',
+                      image: 'assets/4.jpg',
+                      description:
+                          'Nice hoodie worn on many occasions and many places',
+                      price: '120',
+                    ),
+                  ],
+                )
               ],
             ),
-          )
+          ),
         ],
       ),
     );

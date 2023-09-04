@@ -26,6 +26,9 @@ class CategotiesWidget extends StatelessWidget {
             width: 40,
             height: 40,
           ),
+          SizedBox(
+            width: 10,
+          ),
           Text(
             data,
             style: title1.merge(
