@@ -10,3 +10,4 @@ var darkBlue2 = Color.fromRGBO(18, 48, 70, 1);
 var ligthRed = Color.fromARGB(255, 174, 7, 7);
 var darkRed = Color.fromARGB(255, 146, 0, 0);
 var blueGray = Colors.blueGrey;
+var transparent = Colors.transparent;
