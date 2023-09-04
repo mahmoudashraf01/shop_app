@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shoping_strore/shared/themes/colors.dart';
 import 'package:shoping_strore/shared/themes/text.dart';
+import 'package:badges/badges.dart' as badges;
 
 class HomeAppBar extends StatelessWidget {
   const HomeAppBar({super.key});
@@ -28,7 +29,23 @@ class HomeAppBar extends StatelessWidget {
               ),
             ),
           ),
-          
+          Spacer(),
+          badges.Badge(
+            badgeContent: Text(
+              '5',
+              style: TextStyle(
+                color: white,
+              ),
+            ),
+            child: InkWell(
+              onTap: () {},
+              child: Icon(
+                Icons.shopping_bag_rounded,
+                color: darkBlue,
+                size: 30,
+              ),
+            ),
+          ),
         ],
       ),
     );
