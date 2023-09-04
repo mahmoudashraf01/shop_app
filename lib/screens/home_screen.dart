@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shoping_strore/shared/themes/colors.dart';
+import 'package:shoping_strore/shared/themes/text.dart';
+import 'package:shoping_strore/shared/widgets/categories_widgets.dart';
 import 'package:shoping_strore/shared/widgets/home_app_bar.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -50,7 +52,21 @@ class HomeScreen extends StatelessWidget {
                     Spacer(),
                   ],
                 ),
-              )
+              ),
+              Container(
+                margin: EdgeInsets.symmetric(
+                  horizontal: 10,
+                  vertical: 20,
+                ),
+                child: Text(
+                  'Categoties',
+                  style: h3Bold.merge(
+                    TextStyle(color: darkBlue),
+                  ),
+                ),
+              ),
+              //adding categories.
+              CategotiesWidget(),
             ]),
           )
         ],
