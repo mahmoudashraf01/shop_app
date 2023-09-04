@@ -86,6 +86,15 @@ class HomeScreen extends StatelessWidget {
                       CategotiesWidget(
                         image: AssetImage('assets/5.jpg'), data: 'Hooded Shirt',
                       ),
+                      CategotiesWidget(
+                        image: AssetImage('assets/sneekers1.jpg'), data: 'Sneaker',
+                      ),
+                      CategotiesWidget(
+                        image: AssetImage('assets/5.jpg'), data: 'Hooded Shirt',
+                      ),
+                      CategotiesWidget(
+                        image: AssetImage('assets/5.jpg'), data: 'Hooded Shirt',
+                      ),
                     ],
                   ),
                 ),
