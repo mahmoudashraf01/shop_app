@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 var white = Colors.white;
+var white2 = Color.fromARGB(179, 235, 235, 235);
 var black = Colors.black;
 var black2 = Colors.black12;
 var black3 = Colors.black26;
