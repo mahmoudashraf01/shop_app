@@ -1,5 +1,3 @@
-import 'package:curved_navigation_bar/curved_navigation_bar.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:shoping_strore/shared/themes/colors.dart';
 import 'package:shoping_strore/shared/themes/text.dart';
