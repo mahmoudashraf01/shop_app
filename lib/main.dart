@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shoping_strore/screens/cart_screen.dart';
 import 'package:shoping_strore/screens/home_screen.dart';
 import 'package:shoping_strore/shared/themes/colors.dart';
 
@@ -19,7 +20,10 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         scaffoldBackgroundColor: white,
       ),
-      home: HomeScreen(),
+      routes: {
+        '/':(context) => HomeScreen(),
+        'CartScreen':(context) => CartScreen(),
+      },
     );
   }
 }

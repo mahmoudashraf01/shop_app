@@ -16,9 +16,9 @@ void goToWithNoBackButton({required BuildContext context, required Widget screen
     ),
   );
 }
-void goTohNamed({required BuildContext context, required Widget screen}) {
+void goTohNamed({required BuildContext context, required String screen}) {
   Navigator.pushNamed(
     context,
-    AutofillHints.addressCity
+    screen
   );
 }
