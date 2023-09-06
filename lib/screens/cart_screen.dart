@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:shoping_strore/shared/themes/colors.dart';
+import 'package:shoping_strore/shared/themes/text.dart';
 import 'package:shoping_strore/shared/widgets/cart_app_bar.dart';
+import 'package:shoping_strore/shared/widgets/cart_btn_nav_bar.dart';
 import 'package:shoping_strore/shared/widgets/cart_item.dart';
 
 class CartScreen extends StatelessWidget {
@@ -40,11 +42,44 @@ class CartScreen extends StatelessWidget {
                   image: 'assets/sweat_bants1.jpg',
                   price: '100',
                 ),
+                Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  margin: EdgeInsets.symmetric(vertical: 20, horizontal: 15),
+                  padding: EdgeInsets.all(10),
+                  child: Row(
+                    children: [
+                      Container(
+                        decoration: BoxDecoration(
+                          color: teal,
+                          borderRadius: BorderRadius.circular(20),
+                        ),
+                        child: Icon(
+                          Icons.add,
+                          color: white,
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 10),
+                        child: Text(
+                          'Add Coupon Code',
+                          style: title1Bold.merge(
+                            TextStyle(
+                              color: darkBlue,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
               ],
             ),
           )
         ],
       ),
+      bottomNavigationBar: CartBtnNavbar(total: '355',),
     );
   }
 }

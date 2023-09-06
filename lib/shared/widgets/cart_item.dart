@@ -48,8 +48,8 @@ class CartItem extends StatelessWidget {
                   padding: const EdgeInsets.only(top: 50),
                   child: Text(
                     '\$ $price',
-                    style: title1.merge(
-                      TextStyle(color: darkBlue),
+                    style: title1Bold.merge(
+                      TextStyle(color: teal),
                     ),
                   ),
                 ),

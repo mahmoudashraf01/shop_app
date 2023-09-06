@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shoping_strore/screens/cart_screen.dart';
 import 'package:shoping_strore/screens/home_screen.dart';
+import 'package:shoping_strore/screens/item_screen.dart';
 import 'package:shoping_strore/shared/themes/colors.dart';
 
 
@@ -23,6 +24,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/':(context) => HomeScreen(),
         'CartScreen':(context) => CartScreen(),
+        // 'itemScreen':(context) => ItemScreen(),
       },
     );
   }

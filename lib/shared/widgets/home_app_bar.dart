@@ -33,7 +33,7 @@ class HomeAppBar extends StatelessWidget {
           Spacer(),
           badges.Badge(
             badgeContent: Text(
-              '5',
+              '4',
               style: TextStyle(
                 color: white,
               ),
