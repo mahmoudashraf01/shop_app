@@ -6,8 +6,8 @@ import 'package:shoping_strore/shared/widgets/categories_widgets.dart';
 import 'package:shoping_strore/shared/widgets/home_app_bar.dart';
 import 'package:shoping_strore/shared/widgets/item_widgets.dart';
 
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+class ShopScreen extends StatelessWidget {
+  const ShopScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -27,35 +27,6 @@ class HomeScreen extends StatelessWidget {
             ),
             child: Column(
               children: [
-                Container(
-                  margin: EdgeInsets.symmetric(horizontal: 15),
-                  padding: EdgeInsets.symmetric(horizontal: 15),
-                  height: 50,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(30),
-                    color: white,
-                  ),
-                  child: Row(
-                    children: [
-                      Container(
-                        margin: EdgeInsets.only(left: 5),
-                        height: 50,
-                        width: 300,
-                        child: TextFormField(
-                          decoration: InputDecoration(
-                            border: InputBorder.none,
-                            hintText: 'Search ..',
-                            icon: Icon(
-                              Icons.search,
-                              color: darkBlue,
-                            ),
-                          ),
-                        ),
-                      ),
-                      Spacer(),
-                    ],
-                  ),
-                ),
                 Container(
                   margin: EdgeInsets.symmetric(
                     horizontal: 10,
@@ -160,7 +131,7 @@ class HomeScreen extends StatelessWidget {
         ],
       ),
       bottomNavigationBar: BottomNavBar(
-        iconCurrentIndex: 0,
+        iconCurrentIndex: 1,
       ),
       extendBody: true,
     );
