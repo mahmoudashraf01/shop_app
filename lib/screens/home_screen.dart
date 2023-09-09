@@ -47,7 +47,7 @@ class HomeScreen extends StatelessWidget {
                             hintText: 'Search ..',
                             icon: Icon(
                               Icons.search,
-                              color: darkBlue,
+                              color: darkBlue2,
                             ),
                           ),
                         ),
@@ -64,7 +64,7 @@ class HomeScreen extends StatelessWidget {
                   child: Text(
                     'Categoties',
                     style: h3Bold.merge(
-                      TextStyle(color: darkBlue),
+                      TextStyle(color: darkBlue2),
                     ),
                   ),
                 ),
@@ -114,7 +114,7 @@ class HomeScreen extends StatelessWidget {
                   child: Text(
                     'Best Selling',
                     style: h3Bold.merge(
-                      TextStyle(color: darkBlue),
+                      TextStyle(color: darkBlue2),
                     ),
                   ),
                 ),
@@ -131,6 +131,7 @@ class HomeScreen extends StatelessWidget {
                       description:
                           'Nice backpack for travelling or packing tools',
                       price: '55',
+                      title: 'Backpack',
                     ),
                     ItemsWidget(
                       discount: '-30%',
@@ -138,12 +139,14 @@ class HomeScreen extends StatelessWidget {
                       description:
                           'Cool sweater worn on many occasions and many places',
                       price: '80',
+                      title: 'Cool Jacket',
                     ),
                     ItemsWidget(
                       discount: '-60%',
                       image: 'assets/watch1.jpg',
                       description: 'Awesome smart watch with many options',
                       price: '40',
+                      title: 'Smart Watch',
                     ),
                     ItemsWidget(
                       discount: '-20%',
@@ -151,6 +154,7 @@ class HomeScreen extends StatelessWidget {
                       description:
                           'Nice hoodie worn on many occasions and many places',
                       price: '120',
+                      title: 'Cool Hodie',
                     ),
                   ],
                 )

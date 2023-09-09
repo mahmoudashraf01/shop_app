@@ -35,7 +35,7 @@ class ShopScreen extends StatelessWidget {
                   child: Text(
                     'Categoties',
                     style: h3Bold.merge(
-                      TextStyle(color: darkBlue),
+                      TextStyle(color: darkBlue2),
                     ),
                   ),
                 ),
@@ -85,7 +85,7 @@ class ShopScreen extends StatelessWidget {
                   child: Text(
                     'Best Selling',
                     style: h3Bold.merge(
-                      TextStyle(color: darkBlue),
+                      TextStyle(color: darkBlue2),
                     ),
                   ),
                 ),

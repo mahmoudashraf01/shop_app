@@ -10,7 +10,7 @@ class MyBackButton extends StatelessWidget {
           icon: Icon(
             Icons.arrow_back,
             size: 30,
-            color: darkBlue,
+            color: darkBlue2,
           ),
           onPressed: () {
             Navigator.pop(context);

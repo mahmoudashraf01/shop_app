@@ -5,7 +5,7 @@ import 'package:shoping_strore/shared/themes/text.dart';
 
 // ignore: must_be_immutable
 class CartItem extends StatelessWidget {
-  CartItem({super.key,required this.image,required this.price});
+  CartItem({super.key, required this.image, required this.price});
   String price;
   String image;
 
@@ -29,7 +29,7 @@ class CartItem extends StatelessWidget {
           Radio(
             value: '',
             groupValue: '',
-            activeColor: darkBlue,
+            activeColor: darkBlue2,
             onChanged: (value) {},
           ),
           Container(
@@ -82,13 +82,20 @@ class CartItem extends StatelessWidget {
                           ),
                         ],
                       ),
-                      child: Icon(CupertinoIcons.plus),
+                      child: Icon(
+                        CupertinoIcons.plus,
+                        color: darkBlue2,
+                      ),
                     ),
                     Container(
                       margin: EdgeInsets.symmetric(horizontal: 10),
                       child: Text(
                         '01',
-                        style: title2Bold,
+                        style: title2Bold.merge(
+                          TextStyle(
+                            color: darkBlue2,
+                          ),
+                        ),
                       ),
                     ),
                     Container(
@@ -104,7 +111,10 @@ class CartItem extends StatelessWidget {
                           ),
                         ],
                       ),
-                      child: Icon(CupertinoIcons.minus),
+                      child: Icon(
+                        CupertinoIcons.minus,
+                        color: darkBlue2,
+                      ),
                     ),
                   ],
                 ),

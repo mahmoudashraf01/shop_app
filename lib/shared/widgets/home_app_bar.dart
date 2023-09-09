@@ -17,7 +17,7 @@ class HomeAppBar extends StatelessWidget {
           Icon(
             Icons.sort,
             size: 30,
-            color: darkBlue,
+            color: darkBlue2,
           ),
           Padding(
             padding: EdgeInsets.only(left: 20),
@@ -25,7 +25,7 @@ class HomeAppBar extends StatelessWidget {
               'Vines Shop',
               style: h5Bold.merge(
                 TextStyle(
-                  color: darkBlue,
+                  color: darkBlue2,
                 ),
               ),
             ),
@@ -44,7 +44,7 @@ class HomeAppBar extends StatelessWidget {
               },
               child: Icon(
                 Icons.shopping_bag_rounded,
-                color: darkBlue,
+                color: darkBlue2,
                 size: 30,
               ),
             ),

@@ -66,7 +66,7 @@ class CartScreen extends StatelessWidget {
                           'Add Coupon Code',
                           style: title1Bold.merge(
                             TextStyle(
-                              color: darkBlue,
+                              color: darkBlue2,
                             ),
                           ),
                         ),

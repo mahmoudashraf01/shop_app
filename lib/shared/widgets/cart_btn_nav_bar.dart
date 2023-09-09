@@ -21,7 +21,7 @@ class CartBtnNavbar extends StatelessWidget {
               Text(
                 'Total',
                 style: title1Bold.merge(
-                  TextStyle(color: darkBlue),
+                  TextStyle(color: darkBlue2),
                 ),
               ),
               Text(

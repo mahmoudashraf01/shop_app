@@ -33,7 +33,7 @@ class CategotiesWidget extends StatelessWidget {
             data,
             style: title1.merge(
               TextStyle(
-                color: darkBlue,
+                color: darkBlue2,
               ),
             ),
           ),

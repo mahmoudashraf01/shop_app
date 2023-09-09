@@ -3,23 +3,23 @@ import 'package:shoping_strore/shared/themes/colors.dart';
 import 'package:shoping_strore/shared/themes/text.dart';
 import 'package:shoping_strore/shared/widgets/back_button.dart';
 
-class CartAppBar extends StatelessWidget {
-  const CartAppBar({super.key});
+class ItemAppBar extends StatelessWidget {
+  const ItemAppBar({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: white,
+      color: white2,
       padding: EdgeInsets.all(25),
       child: Row(
         children: [
-          InkWell(
-            child: MyBackButton(),
-          ),
+          MyBackButton(),
           Padding(
-            padding: EdgeInsets.only(left: 20),
+            padding: EdgeInsets.only(
+              left: 20,
+            ),
             child: Text(
-              'Cart',
+              'Product',
               style: h5Bold.merge(
                 TextStyle(color: darkBlue2),
               ),
@@ -27,11 +27,10 @@ class CartAppBar extends StatelessWidget {
           ),
           Spacer(),
           Icon(
-            Icons.more_vert,
+            Icons.favorite,
+            color: ligthRed,
             size: 30,
-            color: darkBlue2,
           ),
-
         ],
       ),
     );

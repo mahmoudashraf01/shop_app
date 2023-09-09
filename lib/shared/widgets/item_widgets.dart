@@ -1,20 +1,22 @@
 import 'package:flutter/material.dart';
+import 'package:shoping_strore/screens/item_screen.dart';
+import 'package:shoping_strore/shared/methods/navigation.dart';
 import 'package:shoping_strore/shared/themes/colors.dart';
 import 'package:shoping_strore/shared/themes/text.dart';
 
 // ignore: must_be_immutable
 class ItemsWidget extends StatelessWidget {
-  ItemsWidget({
-    super.key,
-    required this.discount,
-    required this.image,
-    required this.description,
-    required this.price
-  });
+  ItemsWidget(
+      {super.key,
+      required this.discount,
+      required this.image,
+      required this.description,
+      required this.price,this.title});
   String discount;
   String image;
   String description;
-    String price;
+  String price;
+  String? title;
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +35,7 @@ class ItemsWidget extends StatelessWidget {
               Container(
                 padding: EdgeInsets.all(5),
                 decoration: BoxDecoration(
-                  color: darkBlue,
+                  color: darkBlue2,
                   borderRadius: BorderRadius.circular(20),
                 ),
                 child: Text(
@@ -50,7 +52,17 @@ class ItemsWidget extends StatelessWidget {
             ],
           ),
           InkWell(
-            onTap: () {},
+            onTap: () {
+              goTo(
+                context: context,
+                screen: ItemScreen(
+                  img: image,
+                  des: description,
+                  title: title,
+                  price: price,
+                ),
+              );
+            },
             child: Container(
               margin: EdgeInsets.all(10),
               child: Image.asset(
@@ -90,7 +102,7 @@ class ItemsWidget extends StatelessWidget {
                 Text(
                   '\$ $price',
                   style: TextStyle(
-                    color: ligthRed,
+                    color: teal,
                   ),
                 ),
                 Icon(
