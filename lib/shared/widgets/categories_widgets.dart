@@ -34,6 +34,7 @@ class CategotiesWidget extends StatelessWidget {
             style: title1.merge(
               TextStyle(
                 color: darkBlue2,
+                overflow: TextOverflow.ellipsis,
               ),
             ),
           ),

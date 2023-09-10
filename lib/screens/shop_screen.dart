@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:shoping_strore/shared/themes/colors.dart';
 import 'package:shoping_strore/shared/themes/text.dart';
 import 'package:shoping_strore/shared/widgets/bottom_nav_bar.dart';
-import 'package:shoping_strore/shared/widgets/categories_widgets.dart';
 import 'package:shoping_strore/shared/widgets/home_app_bar.dart';
 import 'package:shoping_strore/shared/widgets/item_widgets.dart';
+import 'package:shoping_strore/shared/widgets/item_widgets_shop.dart';
 
 class ShopScreen extends StatelessWidget {
   const ShopScreen({super.key});
@@ -28,62 +28,10 @@ class ShopScreen extends StatelessWidget {
             child: Column(
               children: [
                 Container(
-                  margin: EdgeInsets.symmetric(
-                    horizontal: 10,
-                    vertical: 20,
-                  ),
-                  child: Text(
-                    'Categoties',
-                    style: h3Bold.merge(
-                      TextStyle(color: darkBlue2),
-                    ),
-                  ),
-                ),
-                //adding categories.
-                SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child: Row(
-                    children: [
-                      CategotiesWidget(
-                        image: AssetImage('assets/1.jpg'),
-                        data: 'Backpack',
-                      ),
-                      CategotiesWidget(
-                        image: AssetImage('assets/watch1.jpg'),
-                        data: 'Smart Watch',
-                      ),
-                      CategotiesWidget(
-                        image: AssetImage('assets/3.jpg'),
-                        data: 'Bracelet',
-                      ),
-                      CategotiesWidget(
-                        image: AssetImage('assets/4.jpg'),
-                        data: 'Cool Hoodie',
-                      ),
-                      CategotiesWidget(
-                        image: AssetImage('assets/5.jpg'),
-                        data: 'Hooded Shirt',
-                      ),
-                      CategotiesWidget(
-                        image: AssetImage('assets/sneekers1.jpg'),
-                        data: 'Sneaker',
-                      ),
-                      CategotiesWidget(
-                        image: AssetImage('assets/sweat_bants1.jpg'),
-                        data: 'Sweat Bants',
-                      ),
-                      CategotiesWidget(
-                        image: AssetImage('assets/sweaters2.jpg'),
-                        data: 'Cool Jacket',
-                      ),
-                    ],
-                  ),
-                ),
-                Container(
                   alignment: Alignment.center,
                   margin: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
                   child: Text(
-                    'Best Selling',
+                    'Products',
                     style: h3Bold.merge(
                       TextStyle(color: darkBlue2),
                     ),
@@ -96,12 +44,41 @@ class ShopScreen extends StatelessWidget {
                   shrinkWrap: true,
                   physics: BouncingScrollPhysics(),
                   children: [
+                    ItemsWidgetShop(
+                      image: 'assets/3.jpg',
+                      description:
+                          'Nice backpack for travelling or packing tools',
+                      price: '55',
+                      title: 'Bracelet',
+                    ),
+                    ItemsWidgetShop(
+                      image: 'assets/5.jpg',
+                      description:
+                          'Nice backpack for travelling or packing tools',
+                      price: '55',
+                      title: 'Hooded Shirt',
+                    ),
+                    ItemsWidgetShop(
+                      image: 'assets/sneekers1.jpg',
+                      description:
+                          'Nice backpack for travelling or packing tools',
+                      price: '55',
+                      title: 'Sneaker',
+                    ),
+                    ItemsWidgetShop(
+                      image: 'assets/sweat_bants1.jpg',
+                      description:
+                          'Nice backpack for travelling or packing tools',
+                      price: '55',
+                      title: 'Sweat Bants',
+                    ),
                     ItemsWidget(
                       discount: '-50%',
                       image: 'assets/1.jpg',
                       description:
                           'Nice backpack for travelling or packing tools',
                       price: '55',
+                      title: 'Backpack',
                     ),
                     ItemsWidget(
                       discount: '-30%',
@@ -109,12 +86,14 @@ class ShopScreen extends StatelessWidget {
                       description:
                           'Cool sweater worn on many occasions and many places',
                       price: '80',
+                      title: 'Cool Jacket',
                     ),
                     ItemsWidget(
                       discount: '-60%',
                       image: 'assets/watch1.jpg',
                       description: 'Awesome smart watch with many options',
                       price: '40',
+                      title: 'Smart Watch',
                     ),
                     ItemsWidget(
                       discount: '-20%',
@@ -122,6 +101,7 @@ class ShopScreen extends StatelessWidget {
                       description:
                           'Nice hoodie worn on many occasions and many places',
                       price: '120',
+                      title: 'Cool Hodie',
                     ),
                   ],
                 )

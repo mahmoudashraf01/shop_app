@@ -27,10 +27,6 @@ class BottomNavBar extends StatelessWidget {
           goTo(context: context, screen: ShopScreen());
           iconCurrentIndex = index;
         }
-        else if (index == 2) {
-          goTo(context: context, screen: HomeScreen());
-          iconCurrentIndex = index;
-        }
       },
       height: 60,
       backgroundColor: transparent,
@@ -44,11 +40,6 @@ class BottomNavBar extends StatelessWidget {
         ),
         Icon(
           CupertinoIcons.cart_fill,
-          color: white,
-          size: 30,
-        ),
-        Icon(
-          Icons.list,
           color: white,
           size: 30,
         ),

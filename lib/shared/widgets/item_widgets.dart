@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:shoping_strore/screens/item_screen.dart';
 import 'package:shoping_strore/shared/methods/navigation.dart';
 import 'package:shoping_strore/shared/themes/colors.dart';
@@ -11,7 +12,8 @@ class ItemsWidget extends StatelessWidget {
       required this.discount,
       required this.image,
       required this.description,
-      required this.price,this.title});
+      required this.price,
+      this.title});
   String discount;
   String image;
   String description;
@@ -45,10 +47,19 @@ class ItemsWidget extends StatelessWidget {
                   ),
                 ),
               ),
-              Icon(
-                Icons.favorite_border_rounded,
-                color: ligthRed,
-              )
+              RatingBar.builder(
+                // initialRating: 0,
+                // minRating: 0,
+                
+                itemCount: 1,
+                itemSize: 20,
+                itemPadding: EdgeInsets.symmetric(horizontal: 4),
+                itemBuilder: (context, _) => Icon(
+                  Icons.favorite,
+                  color: ligthRed,
+                ),
+                onRatingUpdate: (value) {},
+              ),
             ],
           ),
           InkWell(
@@ -77,6 +88,9 @@ class ItemsWidget extends StatelessWidget {
             alignment: Alignment.centerLeft,
           ),
           Container(
+            constraints: BoxConstraints(
+              maxHeight: 70,
+            ),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20),
               color: white2,
@@ -85,10 +99,13 @@ class ItemsWidget extends StatelessWidget {
               padding: const EdgeInsets.only(left: 15, top: 2, bottom: 2),
               child: Text(
                 description,
+                maxLines: 3,
                 style: title1.merge(
                   TextStyle(
                     fontSize: 15,
                     fontWeight: FontWeight.bold,
+                    overflow: TextOverflow.ellipsis,
+                    color: darkBlue2,
                   ),
                 ),
               ),
