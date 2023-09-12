@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:shoping_strore/shared/methods/navigation.dart';
 import 'package:shoping_strore/shared/themes/colors.dart';
 import 'package:shoping_strore/shared/themes/text.dart';
 import 'package:badges/badges.dart' as badges;
@@ -17,7 +16,7 @@ class HomeAppBar extends StatelessWidget {
           Icon(
             Icons.sort,
             size: 30,
-            color: darkBlue2,
+            color: darkBlue,
           ),
           Padding(
             padding: EdgeInsets.only(left: 20),
@@ -25,7 +24,7 @@ class HomeAppBar extends StatelessWidget {
               'Vines Shop',
               style: h5Bold.merge(
                 TextStyle(
-                  color: darkBlue2,
+                  color: darkBlue,
                 ),
               ),
             ),
@@ -33,18 +32,16 @@ class HomeAppBar extends StatelessWidget {
           Spacer(),
           badges.Badge(
             badgeContent: Text(
-              '4',
+              '5',
               style: TextStyle(
                 color: white,
               ),
             ),
             child: InkWell(
-              onTap: () {
-                goTohNamed(context: context, screen: ('CartScreen'));
-              },
+              onTap: () {},
               child: Icon(
                 Icons.shopping_bag_rounded,
-                color: darkBlue2,
+                color: darkBlue,
                 size: 30,
               ),
             ),

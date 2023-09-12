@@ -44,31 +44,25 @@ class ShopScreen extends StatelessWidget {
                   shrinkWrap: true,
                   physics: BouncingScrollPhysics(),
                   children: [
+                    ItemsWidget(
+                      discount: '-20%',
+                      image: 'assets/4.jpg',
+                      description:
+                          'Nice hoodie worn on many occasions and many places',
+                      price: '120',
+                      title: 'Cool Hodie',
+                    ),
                     ItemsWidgetShop(
                       image: 'assets/3.jpg',
                       description:
-                          'Nice backpack for travelling or packing tools',
+                          'Nice bracelet for men in the latest fashion and also with good materials',
                       price: '55',
                       title: 'Bracelet',
                     ),
                     ItemsWidgetShop(
-                      image: 'assets/5.jpg',
-                      description:
-                          'Nice backpack for travelling or packing tools',
-                      price: '55',
-                      title: 'Hooded Shirt',
-                    ),
-                    ItemsWidgetShop(
-                      image: 'assets/sneekers1.jpg',
-                      description:
-                          'Nice backpack for travelling or packing tools',
-                      price: '55',
-                      title: 'Sneaker',
-                    ),
-                    ItemsWidgetShop(
                       image: 'assets/sweat_bants1.jpg',
                       description:
-                          'Nice backpack for travelling or packing tools',
+                          'Awesome sweat bants for men available with many colors',
                       price: '55',
                       title: 'Sweat Bants',
                     ),
@@ -88,6 +82,13 @@ class ShopScreen extends StatelessWidget {
                       price: '80',
                       title: 'Cool Jacket',
                     ),
+                    ItemsWidgetShop(
+                      image: 'assets/sneekers1.jpg',
+                      description:
+                          'Nice sneakers available with many suitable colors',
+                      price: '55',
+                      title: 'Sneaker',
+                    ),
                     ItemsWidget(
                       discount: '-60%',
                       image: 'assets/watch1.jpg',
@@ -95,13 +96,12 @@ class ShopScreen extends StatelessWidget {
                       price: '40',
                       title: 'Smart Watch',
                     ),
-                    ItemsWidget(
-                      discount: '-20%',
-                      image: 'assets/4.jpg',
+                    ItemsWidgetShop(
+                      image: 'assets/5.jpg',
                       description:
-                          'Nice hoodie worn on many occasions and many places',
-                      price: '120',
-                      title: 'Cool Hodie',
+                          'Cool hooded shirt for men with high quality materials',
+                      price: '55',
+                      title: 'Hooded Shirt',
                     ),
                   ],
                 )
