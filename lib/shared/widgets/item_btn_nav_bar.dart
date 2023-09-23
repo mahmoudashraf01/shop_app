@@ -44,7 +44,7 @@ class ItembtnNavBar extends StatelessWidget {
             ),
             ElevatedButton.icon(
               onPressed: () {
-                goTo(context: context, screen: PaymentScreen());
+                goTo(context: context, screen: CreditCard());
               },
               icon: Icon(
                 CupertinoIcons.cart_badge_plus,
