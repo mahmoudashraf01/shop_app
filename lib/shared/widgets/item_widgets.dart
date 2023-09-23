@@ -24,7 +24,10 @@ class ItemsWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.only(left: 15, right: 15, top: 10),
-      margin: EdgeInsets.symmetric(horizontal: 5, vertical: 5),
+      margin: EdgeInsets.symmetric(
+        horizontal: 5,
+        vertical: MediaQuery.devicePixelRatioOf(context),
+      ),
       decoration: BoxDecoration(
         color: white,
         borderRadius: BorderRadius.circular(20),
@@ -50,7 +53,7 @@ class ItemsWidget extends StatelessWidget {
               RatingBar.builder(
                 // initialRating: 0,
                 // minRating: 0,
-                
+
                 itemCount: 1,
                 itemSize: 20,
                 itemPadding: EdgeInsets.symmetric(horizontal: 4),

@@ -191,7 +191,7 @@ class ItemScreen extends StatelessWidget {
                       ),
                     ),
                     SizedBox(
-                      height: 54,
+                      height: 30,
                     ),
                   ],
                 ),

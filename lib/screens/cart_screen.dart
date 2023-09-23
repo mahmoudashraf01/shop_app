@@ -79,7 +79,9 @@ class CartScreen extends StatelessWidget {
           )
         ],
       ),
-      bottomNavigationBar: CartBtnNavbar(total: '355',),
+      bottomNavigationBar: CartBtnNavbar(
+        total: '355',
+      ),
     );
   }
 }

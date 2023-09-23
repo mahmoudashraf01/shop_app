@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:shoping_strore/screens/cart_screen.dart';
+import 'package:shoping_strore/shared/methods/navigation.dart';
 import 'package:shoping_strore/shared/themes/colors.dart';
 import 'package:shoping_strore/shared/themes/text.dart';
 import 'package:badges/badges.dart' as badges;
@@ -38,7 +40,9 @@ class HomeAppBar extends StatelessWidget {
               ),
             ),
             child: InkWell(
-              onTap: () {},
+              onTap: () {
+                goTo(context: context, screen: CartScreen());
+              },
               child: Icon(
                 Icons.shopping_bag_rounded,
                 color: darkBlue,

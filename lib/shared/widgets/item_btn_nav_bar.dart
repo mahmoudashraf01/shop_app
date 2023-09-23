@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:shoping_strore/screens/payment_screen.dart';
+import 'package:shoping_strore/shared/methods/navigation.dart';
 import 'package:shoping_strore/shared/themes/colors.dart';
 import 'package:shoping_strore/shared/themes/text.dart';
 
@@ -13,7 +15,7 @@ class ItembtnNavBar extends StatelessWidget {
     return BottomAppBar(
       child: Container(
         height: 70,
-        padding: EdgeInsets.symmetric(horizontal: 20),
+        padding: EdgeInsets.symmetric(horizontal: 10),
         decoration: BoxDecoration(
           color: white,
           borderRadius: BorderRadius.only(
@@ -41,7 +43,9 @@ class ItembtnNavBar extends StatelessWidget {
               ),
             ),
             ElevatedButton.icon(
-              onPressed: () {},
+              onPressed: () {
+                goTo(context: context, screen: PaymentScreen());
+              },
               icon: Icon(
                 CupertinoIcons.cart_badge_plus,
               ),
@@ -55,7 +59,7 @@ class ItembtnNavBar extends StatelessWidget {
                 padding: MaterialStatePropertyAll(
                   EdgeInsets.symmetric(
                     vertical: 10,
-                    horizontal: 12,
+                    horizontal: 10,
                   ),
                 ),
               ),
